@@ -54,6 +54,33 @@
           </div>
         </div>
 
+        <!-- This will be a placeholder for the savings card, which will display the user's total savings for the month. The amount and percentage change will be dynamically populated based on the user's financial data. -->
+         <div class="card my-card">
+          <div class="card-header">
+            <h3 class="card-title">My Card</h3>
+            <button class="card-menu" style="color: white;"><i class="fas fa-ellipsis-h"></i></button>
+          </div>
+          <div style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.5rem;">Linked to your bank account.</div>
+          <div class="card-chip"></div>
+          <!-- This here shows the information of the user's linked card, including the card number, holder's name, and the card's logo. The card details will be dynamically populated based on the user's linked bank account information. -->
+          <div class="card-number">5516 7130 2491 7381</div>
+          <div class="card-holder">User Name</div>
+          <div class="card-logo">
+            <!-- This part here will display the card's logo, which will be dynamically populated based on the card type (e.g., Visa, MasterCard). The logo will be styled to fit within the card design and will be positioned appropriately to enhance the visual appeal of the card. For this instance, it's based on the MasterCard logo. -->
+            <div class="card-logo-circle logo-red"></div>
+            <div class="card-logo-circle logo-orange"></div>
+          </div>
+
+          <div class="spending-section">
+            <!-- This section will display the user's spending limit and the amount used from the total limit. The progress bar will visually represent the percentage of the spending limit that has been used, providing a quick overview of the user's spending habits. The values will be dynamically updated based on the user's financial data. -->
+            <div style="margin-bottom: 0.5rem; font-size: 0.875rem; opacity: 0.9;">Spending Limit</div>
+            <div class="spending-limit">$2,000.00</div>
+            <div class="spending-used">used from $9,000.00</div>
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
