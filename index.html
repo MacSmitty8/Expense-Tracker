@@ -42,7 +42,7 @@
           </div>
         </div>
 
-         <div class="card">
+        <div class="card">
           <div class="card-header">
             <h3 class="card-title">Monthly Expenses</h3>
             <button class="card-menu"><i class="fas fa-ellipsis-h"></i></button>
@@ -55,12 +55,16 @@
         </div>
 
         <!-- This will be a placeholder for the savings card, which will display the user's total savings for the month. The amount and percentage change will be dynamically populated based on the user's financial data. -->
-         <div class="card my-card">
+        <div class="card my-card">
           <div class="card-header">
             <h3 class="card-title">My Card</h3>
-            <button class="card-menu" style="color: white;"><i class="fas fa-ellipsis-h"></i></button>
+            <button class="card-menu" style="color: white">
+              <i class="fas fa-ellipsis-h"></i>
+            </button>
           </div>
-          <div style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.5rem;">Linked to your bank account.</div>
+          <div style="font-size: 0.75rem; opacity: 0.8; margin-bottom: 0.5rem">
+            Linked to your bank account.
+          </div>
           <div class="card-chip"></div>
           <!-- This here shows the information of the user's linked card, including the card number, holder's name, and the card's logo. The card details will be dynamically populated based on the user's linked bank account information. -->
           <div class="card-number">5516 7130 2491 7381</div>
@@ -73,7 +77,11 @@
 
           <div class="spending-section">
             <!-- This section will display the user's spending limit and the amount used from the total limit. The progress bar will visually represent the percentage of the spending limit that has been used, providing a quick overview of the user's spending habits. The values will be dynamically updated based on the user's financial data. -->
-            <div style="margin-bottom: 0.5rem; font-size: 0.875rem; opacity: 0.9;">Spending Limit</div>
+            <div
+              style="margin-bottom: 0.5rem; font-size: 0.875rem; opacity: 0.9"
+            >
+              Spending Limit
+            </div>
             <div class="spending-limit">$2,000.00</div>
             <div class="spending-used">used from $9,000.00</div>
             <div class="progress-bar">
@@ -82,6 +90,35 @@
           </div>
         </div>
 
+        <div class="chart-section">
+          <!-- This section will contain a chart that visualizes the user's financial data, such as income and expenses over time. The chart will be dynamically generated using a JavaScript charting library (e.g., Chart.js) and will provide an interactive way for users to analyze their financial trends. -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Financial Overview</h3>
+              <div style="display: flex; gap: 2rem">
+                <div class="dropdown">
+                  Yearly <i class="fas fa-chevron-down"></i>
+                </div>
+                <button class="filter-btn">
+                  <i class="fas fa-filter"></i>
+                  Filter
+                </button>
+              </div>
+            </div>
+            <div class="chart-container">
+              <div class="chart-bar" style="height: 120px"></div>
+              <div class="chart-bar" style="height: 80px"></div>
+              <div class="chart-bar active" style="height: 200px">
+                <div style="position:absolute; timeline-scope: -30px; left: 50%; transform: translateX(-50%); background:white; padding: 0.25rem 0.5rem; border-radius: 4px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); font-size: 0.75rem; opacity: 0.9;">
+                  <div style="font-weight: 600;">October 2026</div>
+                  <div style="color: #10b981;">Income: $781</div>
+                  <div style="color: #ea560c;">Expenses: $535</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <!-- A majority of these will serve as placeholders for the actual data that will be dynamically populated using JavaScript. The dashboard will be designed to provide a quick overview of the user's financial status, including income, expenses, and savings. -->
