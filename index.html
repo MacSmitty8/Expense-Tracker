@@ -106,16 +106,57 @@
               </div>
             </div>
             <div class="chart-container">
+              <!-- For this part, the chart will be a bar chart that displays the user's income and expenses for each month of the year. The bars will be color-coded to differentiate between income and expenses, and hovering over each bar will display a tooltip with detailed information about the values for that month. -->
               <div class="chart-bar" style="height: 120px"></div>
               <div class="chart-bar" style="height: 80px"></div>
               <div class="chart-bar active" style="height: 200px">
-                <div style="position:absolute; timeline-scope: -30px; left: 50%; transform: translateX(-50%); background:white; padding: 0.25rem 0.5rem; border-radius: 4px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); font-size: 0.75rem; opacity: 0.9;">
-                  <div style="font-weight: 600;">October 2026</div>
-                  <div style="color: #10b981;">Income: $781</div>
-                  <div style="color: #ea560c;">Expenses: $535</div>
+                <div
+                  style="
+                    position: absolute;
+                    timeline-scope: -30px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: white;
+                    padding: 0.25rem 0.5rem;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    font-size: 0.75rem;
+                    opacity: 0.9;
+                  "
+                >
+                <!-- This part here is a demonstration of how the bar will display the income and expenses for October 2026. The income is represented in green, while the expenses are shown in orange. The values will be dynamically updated based on the user's financial data for that month. -->
+                  <div style="font-weight: 600">October 2026</div>
+                  <div style="color: #10b981">Income: $781</div>
+                  <div style="color: #ea560c">Expenses: $535</div>
                 </div>
-              </div>
 
+                <div class="chart-bar-income" style="height: 120px"></div>
+                <div class="chart-bar-expense" style="height: 80px"></div>
+              </div>
+              <!-- These bars represent the user's financial data for each month, with the height of each bar corresponding to the total income and expenses for that month. The chart will be interactive, allowing users to hover over each bar to see detailed information about their financial performance for that specific month. Like the previous bar with color, this one will also be dynamically updated based on the user's financial data for each month of the year. -->
+              <div class="chart-bar" style="height: 150px"></div>
+              <div class="chart-bar" style="height: 90px"></div>
+              <div class="chart-bar" style="height: 110px"></div>
+              <div class="chart-bar" style="height: 130px"></div>
+              <div class="chart-bar" style="height: 100px"></div>
+              <div class="chart-bar" style="height: 80px"></div>
+              <div class="chart-bar" style="height: 140px"></div>
+              <div class="chart-bar" style="height: 95px"></div>
+            </div>
+            <!-- The months are displayed below the chart, providing a clear timeline for the user's financial data. Each month corresponds to the bars above, allowing users to easily correlate their income and expenses with specific time periods. The labels will be dynamically generated based on the current year and will adjust accordingly as the user navigates through different years in the dashboard. -->
+            <div class="chart-labels">
+              <span>Jan</span>
+              <span>Feb</span>
+              <span>Mar</span>
+              <span>Apr</span>
+              <span>May</span>
+              <span>Jun</span>
+              <span>Jul</span>
+              <span>Aug</span>
+              <span>Sep</span>
+              <span>Oct</span>
+              <span>Nov</span>
+              <span>Dec</span>
             </div>
           </div>
         </div>
