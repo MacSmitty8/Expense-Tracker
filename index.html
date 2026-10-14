@@ -113,7 +113,7 @@
                 <div
                   style="
                     position: absolute;
-                    timeline-scope: -30px;
+                    top: -130px;
                     left: 50%;
                     transform: translateX(-50%);
                     background: white;
@@ -124,8 +124,8 @@
                     opacity: 0.9;
                   "
                 >
-                <!-- This part here is a demonstration of how the bar will display the income and expenses for October 2026. The income is represented in green, while the expenses are shown in orange. The values will be dynamically updated based on the user's financial data for that month. -->
-                  <div style="font-weight: 600">October 2026</div>
+                  <!-- This part here is a demonstration of how the bar will display the income and expenses for March 2026. The income is represented in green, while the expenses are shown in orange. The values will be dynamically updated based on the user's financial data for that month. -->
+                  <div style="font-weight: 600">March 2026</div>
                   <div style="color: #10b981">Income: $781</div>
                   <div style="color: #ea560c">Expenses: $535</div>
                 </div>
@@ -135,6 +135,7 @@
               </div>
               <!-- These bars represent the user's financial data for each month, with the height of each bar corresponding to the total income and expenses for that month. The chart will be interactive, allowing users to hover over each bar to see detailed information about their financial performance for that specific month. Like the previous bar with color, this one will also be dynamically updated based on the user's financial data for each month of the year. -->
               <div class="chart-bar" style="height: 150px"></div>
+              <div class="chart-bar" style="height: 70px"></div>
               <div class="chart-bar" style="height: 90px"></div>
               <div class="chart-bar" style="height: 110px"></div>
               <div class="chart-bar" style="height: 130px"></div>
@@ -157,6 +158,81 @@
               <span>Oct</span>
               <span>Nov</span>
               <span>Dec</span>
+            </div>
+          </div>
+          <!-- This part here will be where all the user's expenses will be displayed in a list format. Each expense will be represented by a card that includes details such as the expense category, amount, date, and any additional notes. The list will be dynamically populated based on the user's financial data, allowing them to easily track and manage their expenses over time. -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">All Expenses</h3>
+              <button class="card-menu">
+                <i class="fas fa-ellipsis-h"></i>
+              </button>
+            </div>
+
+            <div
+              style="font-size: 0.75rem; color: #6b7280; margin-bottom: 1rem"
+            >
+              Spending Breakdown by Category
+            </div>
+
+            <div class="expenses-breakdown">
+              <div class="total-expenses">$94,864.00</div>
+              <!-- This part here will display the total expenses for the selected period (daily, weekly, or monthly). The amount will be dynamically updated based on the user's financial data and the selected time frame. -->
+              <div class="period-tabs">
+                <span class="period-tab">Daily</span>
+                <span class="period-tab">Weekly</span>
+                <span class="period-tab active">Monthly</span>
+              </div>
+      
+              <div class="period-amounts">
+                <span>Daily</span>
+                <span>Weekly</span>
+                <span>Monthly</span>
+              </div>
+
+              <div class="period-values">
+                <span>$1,234</span>
+                <span>$5,678</span>
+                <span>$9,012</span>
+              </div>
+
+              <div class="color-bar"></div>
+              <!-- This part here will visually represent the user's spending breakdown by category. Each segment of the bar will correspond to a specific expense category(Food and Health,  Entertainment, Investments and Shopping), with the size of each segment indicating the proportion of total expenses attributed to that category. The colors will be dynamically assigned based on the categories present in the user's financial data, providing a clear and intuitive overview of their spending habits. -->
+                <div class="expense-categories">
+                  <ul class="expense-categories">
+                    <li class="expense-category">
+                      <div class="category-info">
+                        <div class="category-dot dot-food"></div>
+                        <span>Food & Health</span>
+                      </div>
+                      <span>563</span>
+                    </li>
+
+                    <li class="expense-category">
+                      <div class="category-info">
+                        <div class="category-dot dot-entertainment"></div>
+                        <span>Entertainment</span>
+                      </div>
+                      <span>563</span>
+                    </li>
+
+                    <li class="expense-category">
+                      <div class="category-info">
+                        <div class="category-dot dot-shopping"></div>
+                        <span>Shopping</span>
+                      </div>
+                      <span>563</span>
+                    </li>
+
+                    <li class="expense-category">
+                      <div class="category-info">
+                        <div class="category-dot dot-investments"></div>
+                        <span>Investments</span>
+                      </div>
+                      <span>563</span>
+                    </li>
+                  </ul>
+                </div>
             </div>
           </div>
         </div>

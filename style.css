@@ -204,3 +204,69 @@ body {
   width: 37%;
   border-radius: 3px; 
 }
+
+.chart-section{
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.chart-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: end;
+  gap: 1rem;
+  position: relative;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.chart-bar {
+  width: 40px;
+  justify-self: center;
+  background: #e5e7eb;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.chart-bar-income {
+  background: linear-gradient(to top, #e4750e 0%, #cfe107);
+  border-radius: 4px 4px 0 0;
+}
+
+.chart-bar-expense {
+  background: #ea580c;
+  border-radius: 4px;
+}
+
+.chart-labels {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  margin: 1rem 1rem 0;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.expenes-breakdown{
+  margin-top: 1rem;
+}
+
+.total-expenses{
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.period-tabs{
+  display: flex;
+  gap: 1rem; 
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+}
