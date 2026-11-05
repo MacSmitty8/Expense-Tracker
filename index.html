@@ -183,7 +183,7 @@
                 <span class="period-tab">Weekly</span>
                 <span class="period-tab active">Monthly</span>
               </div>
-      
+
               <div class="period-amounts">
                 <span>Daily</span>
                 <span>Weekly</span>
@@ -198,43 +198,100 @@
 
               <div class="color-bar"></div>
               <!-- This part here will visually represent the user's spending breakdown by category. Each segment of the bar will correspond to a specific expense category(Food and Health,  Entertainment, Investments and Shopping), with the size of each segment indicating the proportion of total expenses attributed to that category. The colors will be dynamically assigned based on the categories present in the user's financial data, providing a clear and intuitive overview of their spending habits. -->
-                <div class="expense-categories">
-                  <ul class="expense-categories">
-                    <li class="expense-category">
-                      <div class="category-info">
-                        <div class="category-dot dot-food"></div>
-                        <span>Food & Health</span>
-                      </div>
-                      <span>563</span>
-                    </li>
+              <div class="expense-categories">
+                <ul class="expense-categories">
+                  <li class="expense-category">
+                    <div class="category-info">
+                      <div class="category-dot dot-food"></div>
+                      <span>Food & Health</span>
+                    </div>
+                    <span>563</span>
+                  </li>
 
-                    <li class="expense-category">
-                      <div class="category-info">
-                        <div class="category-dot dot-entertainment"></div>
-                        <span>Entertainment</span>
-                      </div>
-                      <span>563</span>
-                    </li>
+                  <li class="expense-category">
+                    <div class="category-info">
+                      <div class="category-dot dot-entertainment"></div>
+                      <span>Entertainment</span>
+                    </div>
+                    <span>563</span>
+                  </li>
 
-                    <li class="expense-category">
-                      <div class="category-info">
-                        <div class="category-dot dot-shopping"></div>
-                        <span>Shopping</span>
-                      </div>
-                      <span>563</span>
-                    </li>
+                  <li class="expense-category">
+                    <div class="category-info">
+                      <div class="category-dot dot-shopping"></div>
+                      <span>Shopping</span>
+                    </div>
+                    <span>563</span>
+                  </li>
 
-                    <li class="expense-category">
-                      <div class="category-info">
-                        <div class="category-dot dot-investments"></div>
-                        <span>Investments</span>
-                      </div>
-                      <span>563</span>
-                    </li>
-                  </ul>
-                </div>
+                  <li class="expense-category">
+                    <div class="category-info">
+                      <div class="category-dot dot-investments"></div>
+                      <span>Investments</span>
+                    </div>
+                    <span>563</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
+        </div>
+
+        <div class="card transactions-section">
+          <div class="card-header">
+            <h3 class="card-title">Recent Transactions</h3>
+            <div class="filters">
+              <button class="filter-btn">
+                <i class="fas fa-sort"></i>
+                Sort
+              </button>
+              <button class="filter-btn">
+                <i class="fas fa-filter"></i>
+                Filter
+              </button>
+            </div>
+          </div>
+          <table class="transactions-table">
+            <thead>
+              <tr>
+                <th>Date <i class="fas fa-sort"></i></th>
+                <th>Category <i class="fas fa-sort"></i></th>
+                <th>Amount <i class="fas fa-sort"></i></th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+             <!-- For this part, the table will display a list of recent transactions made by the user. Each row will represent a single transaction, including details such as the date of the transaction, the category it falls under (e.g., Food, Entertainment, Shopping), the amount spent, the status of the transaction (e.g., Completed, Pending), and any available actions (e.g., View Details, Edit, Delete). The data will be dynamically populated based on the user's financial activity, allowing them to easily track and manage their transactions in one place. -->
+            <tr>
+              <td>Nov 2, 2026</td>
+              <td>Subscription</td>
+              <td>$300.00</td>
+              <td><span class="status-success">Success</span></td>
+              <td><span class="action-btn"><i class="fas fa-ellipsis-h"></i></span></td>
+              <td>
+                <!-- <button class="btn btn-sm btn-outline-primary">View</button>
+                <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                <button class="btn btn-sm btn-outline-danger">Delete</button> -->
+              </td>
+            </tr>
+            <tr>
+              <td>Nov 4, 2026</td>
+              <td>Subscription</td>
+              <td>$300.00</td>
+              <td><span class="status-success">Success</span></td>
+              <td><span class="action-btn"><i class="fas fa-ellipsis-h"></i></span></td>
+
+            </tr>
+            <tr>
+              <td>Nov 5, 2026</td>
+              <td>Subscription</td>
+              <td>$300.00</td>
+              <td><span class="status-success">Success</span></td>
+              <td><span class="action-btn"><i class="fas fa-ellipsis-h"></i></span></td>
+            </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
