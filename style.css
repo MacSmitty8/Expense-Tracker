@@ -550,7 +550,7 @@ body {
   color: white;
 }
 
-@keyframs fadeIn{
+@keyframes fadeIn{
   from {
     opacity: 0;
   } to {
@@ -558,7 +558,7 @@ body {
   }
 }
 
-keyframes slideIn {
+@keyframes slideIn {
   from {
     transform: translate(-50%, -60%);
     opacity: 0;
@@ -578,7 +578,7 @@ keyframes slideIn {
   }
 }
 
-@media (max-width:768px) {
+@media (max-width:768) {
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
