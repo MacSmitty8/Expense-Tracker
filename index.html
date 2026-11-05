@@ -262,34 +262,45 @@
               </tr>
             </thead>
             <tbody>
-             <!-- For this part, the table will display a list of recent transactions made by the user. Each row will represent a single transaction, including details such as the date of the transaction, the category it falls under (e.g., Food, Entertainment, Shopping), the amount spent, the status of the transaction (e.g., Completed, Pending), and any available actions (e.g., View Details, Edit, Delete). The data will be dynamically populated based on the user's financial activity, allowing them to easily track and manage their transactions in one place. -->
-            <tr>
-              <td>Nov 2, 2026</td>
-              <td>Subscription</td>
-              <td>$300.00</td>
-              <td><span class="status">Success</span></td>
-              <td><span class="action-btn"><i class="fas fa-ellipsis-h"></i></span></td>
-              <td>
-                <!-- <button class="btn btn-sm btn-outline-primary">View</button>
+              <!-- For this part, the table will display a list of recent transactions made by the user. Each row will represent a single transaction, including details such as the date of the transaction, the category it falls under (e.g., Food, Entertainment, Shopping), the amount spent, the status of the transaction (e.g., Completed, Pending), and any available actions (e.g., View Details, Edit, Delete). The data will be dynamically populated based on the user's financial activity, allowing them to easily track and manage their transactions in one place. -->
+              <tr>
+                <td>Nov 2, 2026</td>
+                <td>Subscription</td>
+                <td>$300.00</td>
+                <td><span class="status">Success</span></td>
+                <td>
+                  <span class="action-btn"
+                    ><i class="fas fa-ellipsis-h"></i
+                  ></span>
+                </td>
+                <td>
+                  <!-- <button class="btn btn-sm btn-outline-primary">View</button>
                 <button class="btn btn-sm btn-outline-secondary">Edit</button>
                 <button class="btn btn-sm btn-outline-danger">Delete</button> -->
-              </td>
-            </tr>
-            <tr>
-              <td>Nov 4, 2026</td>
-              <td>Subscription</td>
-              <td>$300.00</td>
-              <td><span class="status">Success</span></td>
-              <td><span class="action-btn"><i class="fas fa-ellipsis-h"></i></span></td>
-
-            </tr>
-            <tr>
-              <td>Nov 5, 2026</td>
-              <td>Subscription</td>
-              <td>$300.00</td>
-              <td><span class="status">Success</span></td>
-              <td><span class="action-btn"><i class="fas fa-ellipsis-h"></i></span></td>
-            </tr>
+                </td>
+              </tr>
+              <tr>
+                <td>Nov 4, 2026</td>
+                <td>Subscription</td>
+                <td>$300.00</td>
+                <td><span class="status">Success</span></td>
+                <td>
+                  <span class="action-btn"
+                    ><i class="fas fa-ellipsis-h"></i
+                  ></span>
+                </td>
+              </tr>
+              <tr>
+                <td>Nov 5, 2026</td>
+                <td>Subscription</td>
+                <td>$300.00</td>
+                <td><span class="status">Success</span></td>
+                <td>
+                  <span class="action-btn"
+                    ><i class="fas fa-ellipsis-h"></i
+                  ></span>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -297,15 +308,117 @@
     </div>
 
     <!-- Income and Expense Buttons -->
-     <div class="add-buttons">
-      <button class="fab fab-income"onclick="openIncomeModal()" title="Add Income">
+    <div class="add-buttons">
+      <button
+        class="fab fab-income"
+        onclick="openIncomeModal()"
+        title="Add Income"
+      >
         <i class="fas fa-plus"></i>
       </button>
 
-       <button class="fab fab-expense"onclick="openExpenseModal()" title="Add Expense">
+      <button
+        class="fab fab-expense"
+        onclick="openExpenseModal()"
+        title="Add Expense"
+      >
         <i class="fas fa-minus"></i>
       </button>
-     </div>
+    </div>
+
+    <!-- Income Modal -->
+     <!-- For this section, the modal will be used to add new income entries. It will contain a form with fields for the amount, category, description, and date of the income. The form will have validation to ensure that all required fields are filled out before submission. When the user submits the form, the data will be processed and added to their financial records, and the modal will close automatically. The modal can be opened by clicking the "Add Income" button and closed by clicking the close button or outside the modal area. -->
+    <div id="incomeModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Add Income</h2>
+          <button class="close-btn" onclick="closeModal('incomeModal')">&times;</button>
+        </div>
+        <!-- Here a user can add their income details, including the amount, category, description, and date. The form will validate the input to ensure that all required fields are filled out before submission. Once the user submits the form, the data will be processed and added to their financial records, and the modal will close automatically. -->
+        <div class="modal-body">
+          <form id="incomeForm" autocomplete="off">
+            <div class="form-group">
+              <label class="form-label">Amount</label>
+              <input type="number" class="form-input" id="incomeAmount" placeholder="Enter Amount" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Category</label>
+              <select class="form-select" id="incomeCategory" required>
+                <option value="">Select Category</option>
+                <option value="salary">Salary</option>
+                <option value="freelance">Freelance</option>
+                <option value="business">Business</option>
+                <option value="investment">Investment</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Description</label>
+              <input type="text" class="form-input" id="incomeDescription" placeholder="Enter Description" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Date</label>
+              <input type="date" class="form-input" id="incomeDate" required />
+            </div>
+
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" onclick="closeModal('incomeModal')">Cancel</button>
+          <button class="btn btn-primary" onclick="addIncome()">Add Income</button>
+        </div>
+
+        <!-- For this part, the modal will be used to add new expense entries. It will contain a form with fields for the amount, category, description, and date of the expense. The form will have validation to ensure that all required fields are filled out before submission. When the user submits the form, the data will be processed and added to their financial records, and the modal will close automatically. The modal can be opened by clicking the "Add Expense" button and closed by clicking the close button or outside the modal area. -->
+        <div id="expenseModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Add Expense</h2>
+          <button class="close-btn" onclick="closeModal('expenseModal')">&times;</button>
+        </div>
+        <!-- Here a user can add their expense details, including the amount, category, description, and date. The form will validate the input to ensure that all required fields are filled out before submission. Once the user submits the form, the data will be processed and added to their financial records, and the modal will close automatically. -->
+        <div class="modal-body">
+          <form id="expenseForm" autocomplete="off">
+            <div class="form-group">
+              <label class="form-label">Amount</label>
+              <input type="number" class="form-input" id="expenseAmount" placeholder="Enter Amount" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Category</label>
+              <select class="form-select" id="expenseCategory" required>
+                <option value="">Select Category</option>
+                <option value="food">Food</option>
+                <option value="shopping">Shopping</option>
+                <option value="transportation">Transportation</option>
+                <option value="utilities">Utilities</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Description</label>
+              <input type="text" class="form-input" id="expenseDescription" placeholder="Enter Description" required />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Date</label>
+              <input type="date" class="form-input" id="expenseDate" required />
+            </div>
+
+          </form>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-secondary" onclick="closeModal('expenseModal')">Cancel</button>
+          <button class="btn btn-primary" onclick="addExpense()">Add Expense</button>
+        </div>
+      </div>
+    </div>
+
     <!-- A majority of these will serve as placeholders for the actual data that will be dynamically populated using JavaScript. The dashboard will be designed to provide a quick overview of the user's financial status, including income, expenses, and savings. -->
 
     <script src="script.js"></script>
